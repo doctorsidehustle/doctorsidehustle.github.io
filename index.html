@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+ <style>
+
+
+
+/* Footer */
+
+
+.social-list {
+  list-style: none;
+}
+.social-list li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+.social-list svg g,
+.social-list svg path {
+  fill: var(--color-light-bg);
+}
+
+.footer-col {
+  margin-bottom: 1rem;
+  }
+
+@media (min-width: 701px) {
+  .footer-cols {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-col  {
+    width: 48%;
+    margin-bottom: 0;
+  }
+}
+
+
+.article-link {
+  display: flex;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-light-grey)
+}
+
+
+.article-link__date {
+  flex: 0 0 72px;
+}
+
+
+
+.home__explore-box {
+  display: block;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-light-bg);
+  display: flex;
+  align-items: center;
+}
+
+.home__explore__icon {
+  flex: 0 0 4rem;
+  padding-left: 0.5rem;
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+  align-items: center;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.site {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+        display: grid;
+        grid-template-columns: auto-fill, auto-fill;
+        grid-template-rows: 50px auto auto;
+        grid-template-areas:
+        "menu menu"
+        "i1 i2"
+        "flex flex"
+        "explore articles"
+        "list list"
+        "ft ft";
+
+    }
+.menu {
+    grid-area:menu;
+}
+.intro1 {
+    grid-area:i1;
+    align-items: center;
+}
+
+
+.introvideo {
+    grid-area:i2;
+    align-items: center;
+}
+
+
+.content1 {
+    grid-area:flex;
+}
+
+.content2 {
+    grid-area:explore;
+}
+
+.content3 {
+    grid-area:articles;
+}
+
+.content4 {
+    grid-area: list;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: #111;
+    color: #333;
+    padding: 2rem 1rem;
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+    background-color: var(--color-black);
+    color: var(--color-light-bg);
+  
+}
+
+.box {
+		background-color: rgb(104, 87, 105);
+		border: 5px solid rgb(97, 97, 97);
+		color: #fff;
+		border-radius: 5px;
+		padding: 20px;
+		font: 100%/1.3 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+
+	}
+    @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+html { font-family: 'Inter', sans-serif; }
+
+:root {
+  /* Colours */
+  --color-default: #333;
+  --color-black: #111;
+  --color-blue: #3897D3;
+  --color-blue-hover: #227cb5;
+  --color-yellow: #EEF13B;
+  --color-light-bg: #F8FAFC;
+  --color-light-grey: #E3E3E3;
+  --color-grey: #666;
+  --page-bg: #fff;
+  --box-shadow: rgba(0,0,0,0.2);
+  /* Layout */
+  --box-corner-radius: 10px;
+}
+
+* {box-sizing: border-box;border:0;margin:0;padding:0;}
+
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--color-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 1rem 1rem 0;
+  background-color: var(--page-bg);
+}
+
+
+/* Links */
+
+a:link,
+a:visited {
+  color: var(--color-black);
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--color-blue-hover);
+}
+
+.nolink { 
+  text-decoration: none;
+}
+
+/* Page structure */
+
+.container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container--narrow {
+  max-width: 680px;
+}
+@media (max-width: 700px) {
+ 
+  .site {
+        display: grid;
+        Place-items: center center;
+       
+        grid-template-areas:
+        "menu"
+        "i1"
+        "i2"
+        "flex"
+        "explore"
+        "articles"
+        "list"
+        "ft";
+}
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.mb1 { margin-bottom: 1rem; }
+.mb2 { margin-bottom: 2rem; }
+.mb3 { margin-bottom: 3rem; }
+.mt0 { margin-top: 0rem !important; }
+.mt1 { margin-top: 1rem; }
+.mt2 { margin-top: 2rem; }
+.mt3 { margin-top: 3rem; }
+.mt4 { margin-top: 4rem; }
+
+
+/* Text */
+
+.fs45 { font-size: 2.81rem }
+.fs36 { font-size: 2.25rem; }
+.fs32 { font-size: 2rem; }
+.fs28 { font-size: 1.75rem; }
+.fs24 { font-size: 1.5rem; }
+.fs16 { font-size: 1rem; }
+.fs14 { font-size: 0.875rem; }
+
+.b { font-weight: bold }
+
+.font-script {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.tc { text-align: center; }
+.tr { text-align: right; }
+.normal { font-weight: normal; }
+.ttu { text-transform: uppercase; }
+
+.color-blue { color: var(--color-blue) }
+ 
+.color-text,
+.color-text a:link,
+a:link.color-text { color: var(--color-default) !important; }
+
+.color-grey,
+.color-text a:hover,
+a:hover.color-text,
+.color-grey a,
+a.color-grey { color: var(--color-grey) !important; }
+
+.line {
+  width: 87px;
+  border: 2px solid var(--color-blue);
+}
+.line--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (min-width: 701px) {
+  .home__topics{
+    display: flex;
+    justify-content: space-between;
+  }
+  .home__topic-block {
+    width: 30%;
+  }
+
+}
+
+
+
+@media (min-width: 501px) {
+  
+}
+.home__topic-block {
+  display: block;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--box-shadow);
+  background-color: var(--page-bg);
+  transition: color 0.3s, transform 0.3s !important;
+  
+}
+
+.home__topic-block:hover {
+  transform: translateY(30px);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="site">
+        <div class="menu"><center><h1>menu</h1></center></div>
+        
+        <div class="intro mt3 mb3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod temporibus quam, debitis fuga, autem explicabo, molestiae laboriosam eligendi iure neque aspernatur totam quos beatae iste nulla ea? Iste, dicta velit.
+        Tempora quis maxime optio quibusdam fugiat porro dolore saepe, molestias sequi doloribus officia iure eligendi alias eos, explicabo nisi amet soluta quam labore ab nam facere debitis! Quaerat, quam ea?</p>
+      </div>
+        
+        <div class="introvideo iframe-container mt3 mb3">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ySUvSt_0C6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+            <div class="content1 home__topics">
+
+
+                <a class="home__topic-block tc color-text nolink mt2" href="/productivity/">
+                  <div class="fs45 mb1">🚀</div>
+                  <h2 class="mb1">Writings</h2>
+                  <p>Filler 1</p>
+                </a>
+            
+                <a class="home__topic-block tc color-text nolink mt2" href="/studying/">
+                  <div class="fs45 mb1">✍️</div>
+                  <h2 class="mb1">Filler 2</h2>
+                  <p>Filler 2</p>
+                </a>
+            
+                <a class="home__topic-block tc color-text nolink mt2" href="/youtube/">
+                  <div class="fs45 mb1">🎬</div>
+                  <h2 class="mb1">Filler 3</h2>
+                  <p>Filler 3</p>
+                </a>
+            
+              </div>
+            
+
+
+
+
+        
+
+          
+          <div class="content2 home__explore mt4">
+      
+            <h2 class="fs32 mb1">Explore</h2>
+      
+            <hr class="line mb2">
+      
+            <a href="/book-notes/" class="home__explore-box nolink color-text">
+              <div class="home__explore__icon fs24">
+                📚
+              </div>
+              <div>
+                <b>Book Summaries &amp; Notes</b>
+                <div class="fs14">Notes, highlights and reviews of my favourite fiction and non-fiction books.</div>
+              </div>
+            </a>
+      
+            <a href="/courses/" class="home__explore-box nolink color-text">
+              <div class="home__explore__icon fs24">
+                🎒
+              </div>
+              <div>
+                <b>My Online Courses</b>
+                <div class="fs14">Browse all of my Skillshare classes, Part Time YouTuber Academy, and lessons on applying to medical school.</div>
+              </div>
+            </a>
+      
+            <a href="/podcast/" class="home__explore-box nolink color-text">
+              <div class="home__explore__icon fs24">
+                🎙
+              </div>
+              <div>
+                <b>My Weekly Podcast</b>
+                <div class="fs14">Each week, my brother and I host a podcast where we ponder about the human condition. Check it out.</div>
+              </div>
+            </a>
+      
+
+        </div>
+        <div class="content3"><h2 class="fs32 mt4 mb1">Latest Articles</h2>
+            
+          <hr class="line mb1">
+    
+              <div class="article-link">
+                <div>
+                  <div class="fs14 color-grey b ttu">
+                      <a href="/tag/youtube/" title="YouTube" class="nolink">YouTube</a>
+                  </div>
+                  <a href="/triple-your-youtube-ad-revenue/" title="Triple Your YouTube Ad Revenue" class="nolink color-text">1111</a>
+                </div>
+    
+              </div>
+              <div class="article-link">
+                <div>
+                  <div class="fs14 color-grey b ttu">
+                      <a href="/tag/productivity/" title="Productivity" class="nolink">Productivity</a>
+                  </div>
+                  <a href="/how-to-stop-overthinking/" title="22222" class="nolink color-text">22222</a>
+                </div>
+    
+              </div>
+              <div class="article-link">
+                <div>
+                  <div class="fs14 color-grey b ttu">
+                      <a href="/tag/studying/" title="3333" class="nolink">Studying</a>
+                  </div>
+                  <a href="/the-hidden-power-of-boredom/" title="3333" class="nolink color-text">3333</a>
+                </div>
+    
+              </div>
+              <div class="article-link">
+                <div>
+                  <div class="fs14 color-grey b ttu">
+                      <a href="/tag/studying/" title="Studying" class="nolink">Studying</a>
+                  </div>
+                  <a href="/waterfall-method/" title="4444" class="nolink color-text">44444</a>
+                </div>
+    
+              </div>
+              <div class="article-link">
+                <div>
+                  <div class="fs14 color-grey b ttu">
+                      <a href="/tag/journal/" title="Journal" class="nolink">Journal</a>
+                  </div>
+                  <a href="/notes-from-a-call-with-my-youtuber-friends/" title="5555" class="nolink color-text">5555</a>
+                </div>
+    
+              </div>
+            </div>
+        <div class="box content4">email list</div>   
+        
+
+
+
+     
+
+          <div class="footer footer-cols">
+            <div class="footer-col">
+              <p style="color: white">&copy; SC 2021. Built tough.</p>
+            </div>
+            <div class="footer-col" tr>
+              <ul class="social-list">
+                <li>
+                  <a href="https://twitter.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M24 4.6c-.9.4-1.8.7-2.8.8 1-.6 1.8-1.6 2.2-2.7-1 .6-2 1-3.1 1.2-.9-1-2.2-1.6-3.6-1.6-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1-4.2-.2-7.8-2.2-10.2-5.2-.5.8-.7 1.6-.7 2.5 0 1.7.9 3.2 2.2 4.1-.8 0-1.6-.2-2.2-.6v.1c0 2.4 1.7 4.4 3.9 4.8-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 2 2.4 3.4 4.6 3.4-1.7 1.3-3.8 2.1-6.1 2.1-.4 0-.8 0-1.2-.1 2.2 1.4 4.8 2.2 7.5 2.2 9.1 0 14-7.5 14-14v-.6c1-.7 1.8-1.6 2.5-2.5z"/></svg>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://youtube.com/" aria-label="YouTube" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M23.8 7.2s-.2-1.7-1-2.4c-.9-1-1.9-1-2.4-1-3.4-.2-8.4-.2-8.4-.2s-5 0-8.4.2c-.5.1-1.5.1-2.4 1-.7.7-1 2.4-1 2.4S0 9.1 0 11.1v1.8c0 1.9.2 3.9.2 3.9s.2 1.7 1 2.4c.9 1 2.1.9 2.6 1 1.9.2 8.2.2 8.2.2s5 0 8.4-.3c.5-.1 1.5-.1 2.4-1 .7-.7 1-2.4 1-2.4s.2-1.9.2-3.9V11c0-1.9-.2-3.8-.2-3.8zM9.5 15.1V8.4l6.5 3.4-6.5 3.3z"/></svg>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M9.032 23L9 13H5V9h4V6.5C9 2.789 11.298 1 14.61 1c1.585 0 2.948.118 3.345.17v3.88H15.66c-1.8 0-2.15.856-2.15 2.112V9h5.241l-2 4h-3.24v10H9.032z"/></svg>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#fff"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/><circle cx="18.406" cy="5.594" r="1.44"/></g></svg>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="/rss" aria-label="RSS" target="_blank" rel="noopener" title="RSS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" d="M6.503 20.752A3.25 3.25 0 013.252 24 3.25 3.25 0 010 20.752a3.25 3.25 0 013.252-3.248 3.25 3.25 0 013.251 3.248zM0 8.18v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817C15.777 15.29 8.721 8.242 0 8.18zm0-3.368C10.58 4.858 19.152 13.406 19.183 24H24C23.97 10.769 13.245.046 0 0v4.812z"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+        </div>
+    
+      
+        
+</body>
+</html>
