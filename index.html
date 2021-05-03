@@ -5,9 +5,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title></title>
 
  <style>
+
+/* Header */
+
+.head .container {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem 2rem;
+}
+.head__nav .nav {
+  list-style: none
+}
+.head__nav {
+  text-align: right;
+  position: relative;
+}
+
+.head__nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-default);
+}
+
+.logo path {
+  fill: var(--color-blue);
+}
+
+@media (max-width: 890px) {
+  /* Mobile nav */
+
+  .head {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: var(--page-bg);
+    border-bottom: 1px solid var(--color-light-grey);
+    z-index: 1;
+  }
+  .head .container {
+    padding: 0;
+    max-width: 100%;
+  }
+  body {
+    padding-top: 3.75rem
+  }
+  .head__logo, .head__nav { width: 50%; }
+  .logo {
+    width: 60px;
+  }
+
+  .nav-trigger { padding: 0.5rem; cursor: pointer; }
+  .nav-wrapper { display: inline-block; }
+  .nav-wrapper .nav {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 30px;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--box-corner-radius);
+    z-index: 10;
+    box-shadow: 0px 2px 4px var(--box-shadow);
+  }
+  .nav-wrapper:hover > .nav {
+    display: block;
+  }
+  .nav-wrapper .nav li a {
+    padding: 0.4rem 1rem;
+    display: block;
+    border: 0;
+    background-color: var(--page-bg);
+    min-width: 140px;
+  }
+  .nav-wrapper .nav li:first-of-type a {
+    border-radius: var(--box-corner-radius) var(--box-corner-radius) 0 0;
+  }
+  .nav-wrapper .nav li:last-of-type a {
+    border-radius: 0 0 var(--box-corner-radius) var(--box-corner-radius);
+  }
+  .nav-wrapper .nav li a:hover {
+    background-color: var(--color-light-bg)
+  }
+
+  .subnav { display: none }
+}
+@media (min-width: 891px) {
+  /* Larger screen nav */
+  .head {
+    /* background-color: var(--color-light-bg); */
+    margin: 0;
+    border:0;
+    padding:0;
+    width: 100%;
+    /* border-bottom: 1px solid var(--color-light-grey); */
+
+  }
+  .logo {
+    width: 90px;
+  }
+  .head__nav {
+    flex: 1 1 auto;
+  }
+  .head__nav a {
+    margin-left: 1.5rem;
+  }
+  .head__nav .nav li {
+    display: inline-block;
+    position: relative;
+  }
+  .head__nav > .nav-trigger { display: none; }
+
+  .nav-wrapper .nav > li a {
+    padding: 0.5rem 0rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-wrapper .nav > li.nav-current a {
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+  }
+
+  /* Hide man mobile nav */
+  .head__nav > .nav-wrapper > .nav-trigger {
+    display: none;
+  }
+
+
+  .subnav .nav-trigger { padding: 0.5rem; margin-right: -0.5rem; cursor: pointer; font-size: 12px }
+  .subnav.nav-wrapper { display: inline-block; }
+  .subnav.nav-wrapper .nav {
+    position: absolute;
+    display: none;
+    left: 0.5rem;
+    top: 28px;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--box-corner-radius);
+    z-index: 10;
+    box-shadow: 0px 2px 4px var(--box-shadow);
+  }
+  .subnav.nav-wrapper:hover > .nav {
+    display: block;
+  }
+  .subnav.nav-wrapper .nav li {
+    display: list-item;
+  }
+  .subnav.nav-wrapper .nav li a {
+    padding: 0.4rem 1rem;
+    margin-left: 0;
+    display: block;
+    border: 0;
+    background-color: var(--page-bg);
+    min-width: 200px;
+    text-align: left;
+  }
+  .subnav.nav-wrapper .nav li:first-of-type a {
+    border-radius: var(--box-corner-radius) var(--box-corner-radius) 0 0;
+  }
+  .subnav.nav-wrapper .nav li:last-of-type a {
+    border-radius: 0 0 var(--box-corner-radius) var(--box-corner-radius);
+  }
+  .subnav.nav-wrapper .nav li a:hover {
+    background-color: var(--color-light-bg)
+  }
+  
+}
 
 
 
@@ -324,10 +491,43 @@ a.color-grey { color: var(--color-grey) !important; }
 
     </style>
 </head>
+
+
+
 <body>
 
     <div class="site">
-        <div class="menu"><center><h1>menu</h1></center></div>
+        <div class="menu">
+          <div class="head mb3"> 
+            <nav class="container">
+              <div class="head__logo"> <h1>DSH</h1>
+                <a class="nolink" href="https://www.doctorsidehustle.com">
+                </a>
+              </div>
+              <div class="head__nav fssmall">
+                <div class="nav-wrapper">
+                  <span class="nav-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="var(--color-default)"><path d="M8 14h7a1 1 0 000-2H8a1 1 0 000 2zM1 4h14a1 1 0 000-2H1a1 1 0 000 2zM1 9h14a1 1 0 000-2H1a1 1 0 000 2z"/></g></svg>
+                  </span>
+                  <ul class="nav">
+              <li class="nav-about"><a href="#">About</a></li>
+              <li class="nav-articles"><a href="#">Articles</a></li>
+              <li class="nav-book-notes"><a href="#">Book Notes</a></li>
+              <li class="nav-tech"><a href="#"">Tech</a></li>
+            
+          </ul>
+          
+                </div>
+              </div>
+            </nav>
+          </div>  
+
+
+
+
+
+        </div>
+         <!-- second row -->
         
         <div class="intro mt3 mb3">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod temporibus quam, debitis fuga, autem explicabo, molestiae laboriosam eligendi iure neque aspernatur totam quos beatae iste nulla ea? Iste, dicta velit.
@@ -339,7 +539,7 @@ a.color-grey { color: var(--color-grey) !important; }
           </div>
             <div class="content1 home__topics">
 
-
+<!-- second row end -->
                 <a class="home__topic-block tc color-text nolink mt2" href="/productivity/">
                   <div class="fs45 mb1">🚀</div>
                   <h2 class="mb1">Writings</h2>
