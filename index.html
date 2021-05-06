@@ -78,7 +78,7 @@ text-decoration: none;
 ; */
 
 
-                /* grid-area: menu;
+/* grid-area: menu;
 display: flex;
 flex-direction: column;
 align-items: start;
@@ -139,11 +139,18 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
                 padding: 25px;
                 /* margin-top: 3rem; */
                 margin-bottom: 2rem;
+   }
+
+/* If the screen size is 600px or less, do below */
+  @media (max-width: 600px) {
+  .header {
+    margin:0;
+  }
+}
 
 
 
 
-            }
 
   .features {
   display: grid;
