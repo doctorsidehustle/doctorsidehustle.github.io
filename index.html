@@ -146,11 +146,13 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
 
             .top{
               display: grid;
-              grid-gap: 40px;
-              grid-template-rows: 1fr 1fr;
+              grid-gap: 10px;
+              grid-template-rows: 100px 1fr;
               grid-template-areas: 
               "introparagraph1"
-              "introparagraph2";
+              "introparagraph2"
+              "introparagraph3"
+              ;
 /*               
               display: flex;
                 flex-direction: row; */
@@ -160,6 +162,8 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
                 margin-right: 0;
                 margin-top: 1rem;
                 margin-bottom: 2rem;
+                margin-left:150px;
+
    }
 
 /* If the screen size is 600px or less, do below */
@@ -171,7 +175,7 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
 
 .cursive {
 font-family: 'Permanent Marker';
-font-size: 28px; }
+font-size: 25px; }
 
 /* a:hover, a:visited, a:active { */
 
@@ -181,6 +185,18 @@ font-size: 28px; }
   color: blue;
 
 }
+
+.introparagraph2 {
+  font-size: 30px;
+
+}
+
+.introparagraph3 {
+
+margin-top: 30px;
+
+}
+
   .features {
   display: grid;
   grid-gap: 20px;
@@ -314,10 +330,14 @@ a, a:hover, a:visited, a:active {
     
         <div class="introparagraph1">
          <i> <blockquote style="text-align: right">The unexamined life is not worth living.<br>-Socrates</blockquote></i>
+        </div>
+            
+           <div class= "introparagraph2 cursive">Welcome all!<br>Let's explore one physician's perspective<br>on life, happiness, and money.
             </div>
             
-           <div class= "introparagraph2 cursive">Welcome all!<br>On this site you'll find one physician's perspective on life, happiness, and money. <br>Check out my <a href="/articles/">writings!</a>
-        </div>
+            <div class="introparagraph3 cursive">
+            Check out my <a href="/articles/">writings!</a>
+            </div>
           
           <!-- <div class="introvideo iframe-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ySUvSt_0C6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -325,6 +345,7 @@ a, a:hover, a:visited, a:active {
         </div>
     
 
+      </div>
 
         <section class="features">
           
