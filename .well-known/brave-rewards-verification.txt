@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: doctorsidehustle.com
-Token: b70a861b2d270cc546075b53b187b1ade76da9cbffb94b417e5e1c7498b5c352
