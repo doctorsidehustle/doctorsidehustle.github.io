@@ -1,8 +1,22 @@
 
+
+.menu-list ul li:before{
+content: "" !important;
+
+
+}
+
+.menu ul li:before{
+  content: "" !important;
+  
+}
+
+
 .newsletter {
   margin:0;
 
 }
+
 
 blockquote {
   margin: 0;
