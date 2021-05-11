@@ -1,0 +1,282 @@
+
+.newsletter {
+  margin:0;
+
+}
+
+blockquote {
+  margin: 0;
+}
+
+.ft-social {
+    /* padding: 0 1.875rem 1.25rem; */
+    background-color: black;
+}
+
+.ft-social-list {
+
+    display: flex;
+    place-content: center;
+    border-top: 1px #777 solid; 
+    padding: 0;
+    margin:0;
+    background-color: black;
+}
+
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+          
+h2{
+font-weight: 400;
+text-decoration: none;
+}
+
+h1 {
+
+  font-weight:900;
+}
+
+
+          .wrapper {
+            grid-gap: 30px;
+          }
+
+            /* * {
+            box-sizing: border-box;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            } */
+
+            html {
+
+                font-family: 'Roboto', 'Inter', sans-serif;
+            }
+
+            /* Navigation */
+
+            .header {
+                /* max-width: 1040px; */
+                margin: 2rem 1rem 2rem 2rem;
+                display: grid;
+                grid-template-areas: "logo menu";
+                grid-template-columns: 1fr 3fr;
+                align-items: center;
+
+
+            }
+
+            .logo {
+                grid-area: logo;
+                width: 90px;
+                /* border: 0;
+                margin: 0;
+                padding: 0; */
+                /* overflow: hidden; */
+            }
+ /* .menu { */
+/* 
+; */
+
+
+/* grid-area: menu;
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: center; */
+                /* display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+                /* font-size: 12; */
+
+            /* } */
+
+            .menu ul {
+                /* display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                list-style: none;
+                text-transform: uppercase;
+                padding: 0;
+                margin: 0;
+                /* font-size: 16px; */
+                /* font-style:  normal; */
+                /* line-height: 1.4; */
+                color: black;
+                font-weight: 525;
+                /* justify-content:right; */
+                text-align: right;
+                text-decoration: none;
+
+            }
+
+            .menu ul a {
+                text-decoration: none;
+                padding: 5px;
+                text-align: right;
+                position: relative;
+                /* font-size: 18px; */
+                color: black;
+
+
+                /* line-height: 1.4; */
+
+
+            }
+
+            .top{
+              display: grid;
+              grid-gap: 10px;
+              grid-template-rows: 100px 1fr;
+              grid-template-areas: 
+              "introparagraph1"
+              "introparagraph2"
+              "introparagraph3"
+              "introparagraph4"
+              ;
+/*               
+              display: flex;
+                flex-direction: row; */
+                /* justify-content: space-between; */
+                /* align-items: center; */
+                padding: 25px;
+                margin-right: 0;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                margin-left:150px;
+
+   }
+.introparagraph4
+{
+margin-top: 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"1 iconarrow"
+;
+margin:0;
+grid-gap: 0;
+margin-bottom: 40px;
+  padding:0;
+  border:0;
+  line-height: 40px;
+/* .iconarrow {
+  grid-area: iconarrow;
+} */
+
+}
+.top .iconarrow {
+  font-size: 70px;
+  grid-area: iconarrow;
+  margin-top: 0;
+  padding:0;
+  border:0;
+
+}
+
+
+/* If the screen size is 600px or less, do below */
+  @media (max-width: 600px) {
+  .header {
+    margin:0;
+  }
+
+  .top {
+    margin:0;
+  
+  }
+
+}
+
+.cursive {
+font-family: 'Permanent Marker';
+font-size: 25px; }
+
+/* a:hover, a:visited, a:active { */
+
+.cursive a, a:hover, a:visited, a:active {
+  text-decoration: underline !important;
+  color: blue;
+
+}
+
+.introparagraph2 {
+  font-size: 30px;
+
+}
+
+.introparagraph3 {
+
+margin-top: 30px;
+
+}
+
+  .features {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* box-shadow: 0 0 4px rgba(0,0,0,0.1); */
+  /* padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--box-shadow); */
+  /* background-color: var(--page-bg); */
+  text-decoration: none;
+  margin-bottom: 2rem;
+/* .features a{
+
+
+} */
+
+}
+
+a:visited {
+  color: black;
+  transition: color 0.3s;
+}
+a:hover {
+  color: black;
+}
+
+
+.feature {
+  /* background: white; */
+  /* padding: 10px; */
+  /* display:block; */
+  /* border: 1px solid rgb(0, 0, 0); */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: color 0.3s, transform 0.3s !important;
+  text-decoration: none;
+}
+
+.features a {
+
+text-decoration: none;
+}
+
+
+.feature:hover {
+  transform: translateY(30px);
+
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+
+
+.feature .icon {
+  font-size: 50px;
+}
+.feature p {
+  color: rgba(0,0,0,0.5);
+}
+        
